@@ -59,7 +59,6 @@ class SecuredController extends Controller
 
     /**
      * @Route("/hello/admin/{name}", name="_demo_secured_hello_admin")
-     * @Secure(roles="ROLE_ADMIN")
      * @Template()
      */
     public function helloadminAction($name)

@@ -1,0 +1,11 @@
+parameters:
+    demo.user.keyvalue_manager.class: Motain\UserBundle\Manager\KeyValueUserManager
+
+services:
+    demo.user.keyvalue_manager:
+        class: "%demo.user.keyvalue_manager.class%"
+        arguments:
+            - @security.encoder_factory
+            - @fos_user.util.username_canonicalizer
+            - @fos_user.util.email_canonicalizer
+            - %fos_user.model.user.class%

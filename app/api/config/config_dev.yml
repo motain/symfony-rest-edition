@@ -5,6 +5,11 @@ framework:
     router:   { resource: "%kernel.root_dir%/config/routing_dev.yml" }
     profiler: { only_exceptions: false }
 
+# Twig Configuration
+twig:
+    debug:            %kernel.debug%
+    strict_variables: %kernel.debug%
+
 web_profiler:
     toolbar: true
     intercept_redirects: false
@@ -22,8 +27,10 @@ monolog:
             type:  chromephp
             level: info
 
-assetic:
-    use_controller: true
+#assetic:
+#    use_controller: true
+
+nelmio_api_doc: ~
 
 #swiftmailer:
 #    delivery_address: me@example.com
